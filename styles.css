@@ -1,0 +1,95 @@
+/* Homepage site card styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: #f6f7fb;
+  color: #222;
+}
+
+.main-header {
+  text-align: center;
+  padding: 2.5rem 1rem 1.5rem 1rem;
+  background: linear-gradient(90deg, #f7cac9 0%, #92a8d1 100%);
+  color: #222;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.main-header h1 {
+  margin: 0;
+  font-size: 2.7rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin: 0.5rem 0 0 0;
+  font-size: 1.2rem;
+  color: #444;
+  font-weight: 400;
+}
+
+.sites-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+}
+
+.site-card {
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+  background: #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+.site-card:hover {
+  transform: translateY(-8px) scale(1.035);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+}
+
+.site-card-bg {
+  height: 110px;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.92);
+}
+
+.site-card-content {
+  padding: 0.9rem 0.7rem 0.7rem 0.7rem;
+}
+
+.site-card-content h2 {
+  font-size: 1.1rem;
+}
+
+.site-card-content p {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 700px) {
+  .main-header h1 {
+    font-size: 2rem;
+  }
+
+  .sites-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+    padding: 0 0.2rem;
+  }
+
+  .site-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .sites-list {
+    grid-template-columns: 1fr;
+  }
+}
